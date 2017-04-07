@@ -29,11 +29,12 @@ Pizza.prototype.price = function() {
     pizzaPrice += 3;
     console.log(pizzaPrice + "xc")
   }
-  if (this.size === "Medium") {
+  if (this.size === "Medium (feeds 2-4 members of an Epicodus cohort)") {
       pizzaPrice += 6;
-    } else if (this.size === "Large") {
+      console.log(pizzaPrice + "Medium")
+    } else if (this.size === "Large (feeds 5-10 members of an Epicodus cohort)") {
       pizzaPrice += 12;
-    } else if (this.size === "Gigantic") {
+    } else if (this.size === "Gigantic (feeds an entire Epicodus Cohort)") {
       pizzaPrice += 20;
     }
     return pizzaPrice

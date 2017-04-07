@@ -10,7 +10,7 @@ Input what sort of pizza you would like. The user will select which crust, which
 
 ## Specifications
 
-- Ask the user to create their own pizzaPrice
+- Ask the user to create their own pizza.
 - Set a different price depending on which crust the user wants. Thin crust is $1 cheaper than both hand tossed and deep Dish
 - Set a different price depending on which sauce the user selects. Marinara is $1 cheaper than both white garlic and barbecue sauce
 - Set a different price for what toppings the user selects.
