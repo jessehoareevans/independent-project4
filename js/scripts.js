@@ -18,12 +18,13 @@ Pizza.prototype.price = function() {
   }
   if (this.toppings === "Pepperoni" || "Chicken" || "Sausage" || "Mushrooms" || "Olives" || "Bell Peppers")
     pizzaPrice += 1;
-    if (this.size === "Medium") {
+
+  if (this.size === "Medium") {
       pizzaPrice = 3;
     } else if (this.size === "Large") {
       pizzaPrice = 6;
     } else if (this.size === "Gigantic") {
-      pizza.Price = 12;
+      pizza.Price = 20;
     }
     return pizzaPrice
 }
@@ -37,9 +38,9 @@ $(document).ready(function() {
 
     var newPizzaPrice= new Pizza(inputtedCrust, inputtedSauce, inputtedToppings, inputtedSize);
 
-    $($"#output").show;
+    $("#output").show();
     $("span#price-output").text(newPizzaPrice.price());
 
     event.preventDefault();
-  })
-})
+  });
+});
