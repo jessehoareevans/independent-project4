@@ -31,6 +31,11 @@ Pizza.prototype.price = function() {
 
 $(document).ready(function() {
   $("#pizza-info").submit(function(event) {
+    $("#price-output").show()
+    $("input:checkbox[name=toppings]:checked").each(function(){
+      var toppings = $(this).val();
+     $('#price-output').append(toppings + "<br>");
+   });
     var inputtedCrust = $("#pizza-crust").val();
     var inputtedSauce = $("#sauce").val();
     var inputtedToppings = $("#toppings").val();
