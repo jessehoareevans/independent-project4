@@ -8,15 +8,20 @@ function Pizza(crust, sauce, toppings, size) {
 }
 
 Pizza.prototype.price = function() {
-  if (this.crust === "Hand Tossed" || "Thin Crust") {
+  var pizzaPrice = 0;
+  if (this.crust === "Hand Tossed") {
     pizzaPrice += 5;
-  } else if (this.crust === "Deep Dish") {
+    console.log(pizzaPrice + " ht")
+  } else if (this.crust === "Deep Dish" || "Thin Crust") {
     pizzaPrice += 7;
+    console.log(pizzaPrice + " dd")
   }
   if (this.sauce === "Marinara") {
     pizzaPrice += 1;
-  } else if (this.toppings === "Barbecue" || "White Garlic") {
+    console.log(pizzaPrice + " mar")
+  } else if (this.sauce === "Barbecue" || "White Garlic") {
     pizzaPrice += 2;
+    console.log(pizzaPrice + " bbq")
   }
   if (this.toppings === "Pepperoni" || "Chicken" || "Sausage") {
     pizzaPrice += 2;
