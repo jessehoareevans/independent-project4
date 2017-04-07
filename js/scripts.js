@@ -27,3 +27,19 @@ Pizza.prototype.price = function() {
     }
     return pizzaPrice
 }
+
+$(document).ready(function() {
+  $("#pizza-info").submit(function(event) {
+    var inputtedCrust = $("#pizza-crust").val();
+    var inputtedSauce = $("#sauce").val();
+    var inputtedToppings = $("#toppings").val();
+    var inputtedSize = $("#size").val();
+
+    var newPizzaPrice= new Pizza(inputtedCrust, inputtedSauce, inputtedToppings, inputtedSize);
+
+    $($"#output").show;
+    $("span#price-output").text(newPizzaPrice.price());
+
+    event.preventDefault();
+  })
+})
