@@ -34,17 +34,17 @@ Pizza.prototype.price = function() {
 $(document).ready(function() {
   $("#pizza-info").submit(function(event) {
     event.preventDefault();
+  $("input:checkbox[name=toppings]:checked").each(function(){
+    toppingsArray.push($(this).val());
 
     var inputtedToppings = $("#toppings").val();
     var inputtedSize = $("#size").val();
     var toppingsArray = [];
 
-    $("input:checkbox[name=toppings]:checked").each(function(){
-      toppingsArray.push($(this).val());
-      var newPizzaPrice= new Pizza(inputtedToppings, inputtedSize, toppingsArray)
+    var newPizzaPrice= new Pizza(inputtedToppings, inputtedSize, toppingsArray)
 
-      $("#output").show();
-      $("span#price-output").text(newPizzaPrice.price());
+    $("#output").show();
+    $("span#price-output").text(newPizzaPrice.price());
     });
   });
 });
