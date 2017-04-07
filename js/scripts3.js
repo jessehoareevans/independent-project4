@@ -43,7 +43,7 @@ $(document).ready(function() {
       toppingsArray.push($(this).val());
       var newPizzaPrice= new Pizza(inputtedToppings, inputtedSize, toppingsArray)
 
-      $("#output").text();
+      $("#output").show();
       $("span#price-output").text(newPizzaPrice.price());
     });
   });
