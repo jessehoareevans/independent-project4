@@ -11,22 +11,22 @@ Pizza.prototype.price = function() {
   var pizzaPrice = 0;
   if (this.crust === "Hand Tossed") {
     pizzaPrice += 5;
-    console.log(pizzaPrice + " ht")
+    console.log (pizzaPrice + " HT")
   } else if (this.crust === "Deep Dish" || "Thin Crust") {
     pizzaPrice += 7;
-    console.log(pizzaPrice + " dd")
+    console.log (pizzaPrice + " bbq")
   }
   if (this.sauce === "Marinara") {
     pizzaPrice += 1;
-    console.log(pizzaPrice + " mar")
   } else if (this.sauce === "Barbecue" || "White Garlic") {
     pizzaPrice += 2;
-    console.log(pizzaPrice + " bbq")
   }
   if (this.toppings === "Pepperoni" || "Chicken" || "Sausage") {
     pizzaPrice += 2;
+    console.log(pizzaPrice + " meat")
   } else if (this.toppings === "Mushrooms" || "Olives" || "Bell Peppers") {
     pizzaPrice += 1;
+    console.log(pizzaPrice + " veg")
   }
   if (this.size === "Medium") {
       pizzaPrice += 3;
@@ -43,7 +43,7 @@ $(document).ready(function() {
     $("#price-output").show()
     $("input:checkbox[name=toppings]:checked").each(function(){
       var toppings = $(this).val();
-     $('#price-output').append(toppings + "<br>");
+      $('span#price-output').append(toppings + "<br>");
    });
     var inputtedCrust = $("#pizza-crust").val();
     var inputtedSauce = $("#sauce").val();
