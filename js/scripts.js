@@ -13,12 +13,16 @@ Pizza.prototype.price = function() {
   } else if (this.crust === "Deep Dish") {
     pizzaPrice += 7;
   }
-  if (this.sauce === "Marinara" || "Barbecue" || "White Garlic") {
+  if (this.sauce === "Marinara") {
+    pizzaPrice += 1;
+  } else if (this.toppings === "Barbecue" || "White Garlic") {
     pizzaPrice += 2;
   }
-  if (this.toppings === "Pepperoni" || "Chicken" || "Sausage" || "Mushrooms" || "Olives" || "Bell Peppers")
+  if (this.toppings === "Pepperoni" || "Chicken" || "Sausage") {
+    pizzaPrice += 2;
+  } else if (this.toppings === "Mushrooms" || "Olives" || "Bell Peppers") {
     pizzaPrice += 1;
-
+  }
   if (this.size === "Medium") {
       pizzaPrice += 3;
     } else if (this.size === "Large") {
